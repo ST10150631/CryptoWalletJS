@@ -1,0 +1,30 @@
+{
+  "name": "js-backend",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "node server.js",
+    "electron": "electron .",
+    "dev": "concurrently \"npm run start\" \"npm run electron\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "bip39": "^3.1.0",
+    "concurrent": "^0.3.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "ethers": "^6.14.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1",
+    "nodejs": "^0.0.0",
+    "xrpl": "^4.2.5"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "electron": "^36.4.0"
+  },
+  "description": ""
+}

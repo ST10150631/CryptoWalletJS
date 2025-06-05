@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XRP Wallet</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+ <div class="app-container">
+  <!-- Wallet Type Selector -->
+  <div class="wallet-type-bar">
+    <label><input type="radio" name="walletType" value="xrp" checked /> XRP</label>
+    <label><input type="radio" name="walletType" value="btc" /> BTC</label>
+    <label><input type="radio" name="walletType" value="eth" /> ETH</label>
+    <label><input type="radio" name="walletType" value="usdt" /> USDT</label>
+  </div>
+
+  <!-- Layout Wrapper: Sidebar + Main Wallet Container -->
+  <div class="wallet-layout">
+    <!-- Sidebar -->
+    <div class="wallet-list-sidebar">
+      <h3>Wallets</h3>
+      <div id="wallet-list"></div>
+    </div>
+
+    <!-- Wallet Details Container -->
+    <div class="wallet-container">
+      <h1>My Wallet</h1>
+      <button id="btn-generate">Generate New Wallet</button>
+
+      <div id="wallet-info" class="hidden">
+        <p><strong>Address:</strong> <span id="wallet-address"></span></p>
+        <p><strong>Secret:</strong> <span id="private-key"></span></p>
+        <p><strong>Balance:</strong> <span id="balance">0.00</span> <span id="wallet-currency"></span></p>
+
+        <h2>Send</h2>
+        <input type="text" id="recipient" placeholder="Recipient Address" />
+        <input type="number" id="amount" placeholder="Amount" />
+        <button id="btn-send">Send</button>
+        <p id="send-status"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="wallet.js"></script>
+</body>
+</html>
